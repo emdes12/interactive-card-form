@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-section {
+main {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -90,7 +90,7 @@ header .front-card-cont {
   left: 16px;
 }
 
-main {
+section {
   flex: 1;
   margin-top: 87px;
   padding: 0px 23px 43px 23px;
@@ -127,6 +127,10 @@ input:-ms-input-placeholder {
 
 input::placeholder {
   color: hsl(279deg, 6%, 55%);
+}
+
+input:focus {
+  border: hsl(278deg, 68%, 11%);
 }
 
 input {
@@ -173,8 +177,8 @@ button {
   color: hsl(228deg, 45%, 44%);
 }
 
-@media (min-width: 900px) {
-  section {
+@media (min-width: 1300px) {
+  main {
     flex-direction: row;
   }
   header {
@@ -195,7 +199,7 @@ header .front-card-cont {
     top: 470px;
     left: 257px;
   }
-  main {
+  section {
     justify-content: center;
     gap: 10px;
   }
