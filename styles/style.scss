@@ -129,6 +129,10 @@ button {
   max-width: 375px;
 }
 
+input {
+  all: unset;
+}
+
 input,
 button {
   margin: 0;
@@ -136,8 +140,10 @@ button {
   border: none;
   border-radius: 10px;
   font-size: 18px;
+  box-sizing: border-box;
   padding: 10px 18px;
   margin-top: 5px;
+  cursor: auto;
 }
 
 input::placeholder {
@@ -145,7 +151,7 @@ input::placeholder {
 }
 
 input:focus {
-  border: $Very-dark-violet;
+  border: 3px solid $Very-dark-violet;
 }
 
 input {
@@ -175,6 +181,41 @@ button {
   cursor: pointer;
   background-color: $Very-dark-violet;
   color: $White;
+}
+
+.completed-state {
+  width: 100%;
+  max-width: 375px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+
+  .confirm-cirlce {
+    width: 80px;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    color: $White;
+    font-size: 30px;
+    font-weight: 500;
+    background-image: linear-gradient($Lin-grad-1, $Lin-grad-2);
+  }
+
+  span {
+    color: $Very-dark-violet;
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  p {
+    color: $Dark-grayish-violet;
+    font-size: large;
+    font-weight: 500;
+  }
 }
 
 .attribution {
