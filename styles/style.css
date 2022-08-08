@@ -106,6 +106,10 @@ button {
   max-width: 375px;
 }
 
+input {
+  all: unset;
+}
+
 input,
 button {
   margin: 0;
@@ -113,8 +117,10 @@ button {
   border: none;
   border-radius: 10px;
   font-size: 18px;
+  box-sizing: border-box;
   padding: 10px 18px;
   margin-top: 5px;
+  cursor: auto;
 }
 
 input::-moz-placeholder {
@@ -130,7 +136,7 @@ input::placeholder {
 }
 
 input:focus {
-  border: hsl(278deg, 68%, 11%);
+  border: 3px solid hsl(278deg, 68%, 11%);
 }
 
 input {
@@ -160,6 +166,38 @@ button {
   cursor: pointer;
   background-color: hsl(278deg, 68%, 11%);
   color: hsl(0deg, 0%, 100%);
+}
+
+.completed-state {
+  width: 100%;
+  max-width: 375px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+}
+.completed-state .confirm-cirlce {
+  width: 80px;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 30px;
+  font-weight: 500;
+  background-image: linear-gradient(hsl(249deg, 99%, 64%), hsl(278deg, 94%, 30%));
+}
+.completed-state span {
+  color: hsl(278deg, 68%, 11%);
+  font-size: 30px;
+  font-weight: 500;
+}
+.completed-state p {
+  color: hsl(279deg, 6%, 55%);
+  font-size: large;
+  font-weight: 500;
 }
 
 .attribution {
